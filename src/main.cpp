@@ -11,18 +11,18 @@ String SysID="AirSampler";
 // USE THESE FOR SFC CALIBRATION //
 // extra für den Christian :) //
 
-const uint8_t SFC_MaxFlow=103; // 217 ~ 7l - directly written to the DAC [0...255] //AS4:103; 
+const uint8_t SFC_MaxFlow=180; // 217 ~ 7l - directly written to the DAC [0...255] //AS4:180; I:180;
 
 const uint32_t SFC_MeasureDelay=5e3; // at this time, we calculate the actual flow [ms]
-const float SFC_CorrFactor=1.0; // komischer Fucktor der experimentell ermittelt werden will (auslitern) :-( AS4:1.688+17ml
+const float SFC_CorrFactor=1.02; // komischer Fucktor der experimentell ermittelt werden will (auslitern) :-( AS4:1.02; 
 
 // END OF SFC CALIBRATION STUFF //
 
 const uint32_t maxSampleRuntime=50e3;  //Abbruchbedingung bei z.B. verstopften Röhrchen
 
 constexpr bool ignoreMissingHardware=false; // debugging -- yay!
-constexpr bool dontWaitForGPS=true;
-constexpr bool dontCheckSD=true;
+constexpr bool dontWaitForGPS=false;
+constexpr bool dontCheckSD=false;
 
 const uint32_t purgeTimePerValve=2e3;
 const bool purgeResetsValveCounter=HIGH;

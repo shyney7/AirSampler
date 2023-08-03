@@ -190,7 +190,7 @@ void valveClosingLogic(){ // function runs while valve is OPEN
     dprint(DataForSD.SFCFlow_liters_corrected);
     dprintln("l/m");
 
-    uint32_t SFC_time=G_SFCCurrentFlow/DataForSD.SFCFlow_liters_corrected*60000UL;
+    uint32_t SFC_time= 25300;//G_SFCCurrentFlow/DataForSD.SFCFlow_liters_corrected*60000UL; //25300 backup; I:24075; 3:24575; II: 24675
     EPD_BarMaxTImeInSecs=(int16_t)(G_SFCCurrentFlow/DataForSD.SFCFlow_liters_corrected*60)-(SFC_MeasureDelay/1000);
 
     dprintf(F("SFC_time: "));
